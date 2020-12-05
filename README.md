@@ -28,4 +28,4 @@ Please note that if printer is starting (heating or leveling bed) ETA will show 
 
 ## Credits
 
-This plugin was originally developed by Jakub Furman. I was no longer being maintained so I took ownership to keep it alive.
+This plugin was originally developed by Jakub Furman. It was no longer being maintained so I took ownership/forked to keep it alive.

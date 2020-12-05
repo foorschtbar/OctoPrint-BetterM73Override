@@ -14,14 +14,14 @@ plugin_package = "octoprint_m73etaoverride"
 plugin_name = "M73 ETA Override"
 
 # The plugin's version. Can be overwritten within OctoPrint's internal data via __plugin_version__ in the plugin module
-plugin_version = "1.0.2"
+plugin_version = "1.0.3"
 
 # The plugin's description. Can be overwritten within OctoPrint's internal data via __plugin_description__ in the plugin
 # module
 plugin_description = """Plugin that overrides OctoPrint ETA to values from M73 gcode sent to the printer. Very usable with Prusa Slic3r which is adding M73 to generated gcodes and which is better than normal estimation."""
 
 # The plugin's author. Can be overwritten within OctoPrint's internal data via __plugin_author__ in the plugin module
-plugin_author = "Gaston Dombiak"
+plugin_author = "Jakub Furman, Gaston Dombiak"
 
 # The plugin's author's mail address.
 plugin_author_email = "gdombiak@gmail.com"

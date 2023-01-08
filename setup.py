@@ -18,7 +18,7 @@ plugin_version = "1.0.0"
 
 # The plugin's description. Can be overwritten within OctoPrint's internal data via __plugin_description__ in the plugin
 # module
-plugin_description = """Plugin that overrides OctoPrint ETA and percentage to values from M73 gcode sent to the printer. Very usable with Prusa Slic3r which is adding M73 to generated gcodes and which is better than normal estimation."""
+plugin_description = """Plugin that overrides OctoPrint ETA and progress to values from M73 gcode sent to the printer. Very usable with Prusa Slic3r which is adding M73 to generated gcodes and which is better than normal estimation."""
 
 # The plugin's author. Can be overwritten within OctoPrint's internal data via __plugin_author__ in the plugin module
 plugin_author = "Jakub Furman, Gaston Dombiak, foorschtbar"

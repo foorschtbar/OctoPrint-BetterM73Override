@@ -4,30 +4,30 @@
 ### Do not forget to adjust the following variables to your own plugin.
 
 # The plugin's identifier, has to be unique
-plugin_identifier = "m73etaoverride"
+plugin_identifier = "BetterM73Override"
 
 # The plugin's python package, should be "octoprint_<plugin identifier>", has to be unique
-plugin_package = "octoprint_m73etaoverride"
+plugin_package = "octoprint_betterm73override"
 
 # The plugin's human readable name. Can be overwritten within OctoPrint's internal data via __plugin_name__ in the
 # plugin module
-plugin_name = "M73 ETA Override"
+plugin_name = "Better M73 Override"
 
 # The plugin's version. Can be overwritten within OctoPrint's internal data via __plugin_version__ in the plugin module
-plugin_version = "1.0.4"
+plugin_version = "1.0.0"
 
 # The plugin's description. Can be overwritten within OctoPrint's internal data via __plugin_description__ in the plugin
 # module
-plugin_description = """Plugin that overrides OctoPrint ETA to values from M73 gcode sent to the printer. Very usable with Prusa Slic3r which is adding M73 to generated gcodes and which is better than normal estimation."""
+plugin_description = """Plugin that overrides OctoPrint ETA and percentage to values from M73 gcode sent to the printer. Very usable with Prusa Slic3r which is adding M73 to generated gcodes and which is better than normal estimation."""
 
 # The plugin's author. Can be overwritten within OctoPrint's internal data via __plugin_author__ in the plugin module
-plugin_author = "Jakub Furman, Gaston Dombiak"
+plugin_author = "Jakub Furman, Gaston Dombiak, foorschtbar"
 
 # The plugin's author's mail address.
-plugin_author_email = "gdombiak@gmail.com"
+plugin_author_email = "mail@wischmopp90.cm"
 
 # The plugin's homepage URL. Can be overwritten within OctoPrint's internal data via __plugin_url__ in the plugin module
-plugin_url = "https://github.com/gdombiak/OctoPrint-M73ETAOverride"
+plugin_url = "https://github.com/foorschtbar/OctoPrint-BetterM73Override"
 
 # The plugin's license. Can be overwritten within OctoPrint's internal data via __plugin_license__ in the plugin module
 plugin_license = "AGPLv3"

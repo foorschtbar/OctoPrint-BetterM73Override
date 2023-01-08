@@ -1,6 +1,6 @@
-# OctoPrint M73 ETA Override
+# Better M73 Override
 
-Plugin that overrides OctoPrint ETA to values from last M73 gcode sent to the printer.
+Plugin that overrides OctoPrint ETA and percentage to values from last M73 gcode sent to the printer.
 
 PrusaSlicer is able to calculate print estimates very accurately. Those estimates get injected into generated gcode as [M73 gcode](https://marlinfw.org/docs/gcode/M073.html) commands. This plugin reads the injected information to override what OctoPrint uses as default to calculate estimates. Improved estimates are displayed in OctoPrint, your printer display and in your favorite OctoPrint client.
 
@@ -14,11 +14,7 @@ Prusa printers will display M73 estimates without any modifications. Printers th
 
 ## Setup
 
-Install via the bundled [Plugin Manager](https://github.com/foosel/OctoPrint/wiki/Plugin:-Plugin-Manager)
-or manually using this URL:
-
-    https://github.com/gdombiak/OctoPrint-M73ETAOverride/archive/master.zip
-
+Install via the bundled [Plugin Manager](https://github.com/foosel/OctoPrint/wiki/Plugin:-Plugin-Manager) or manually using the [zipped Repo](https://github.com/foorschtbar/OctoPrint-BetterM73Override/archive/master.zip)
 
 ## Configuration
 
@@ -28,4 +24,4 @@ Please note that if printer is starting (heating or leveling bed) ETA will show 
 
 ## Credits
 
-This plugin was originally developed by Jakub Furman. It was no longer being maintained so I took ownership/forked to keep it alive.
+This plugin was originally developed by [Jakub Furman](https://github.com/sysadminsh/OctoPrint-M73ETAOverride) and later updated from  [Gaston Dombiak](https://github.com/gdombiak/OctoPrint-M73ETAOverride). It was no longer being maintained so I took ownership/forked to keep it alive.

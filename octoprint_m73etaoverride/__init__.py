@@ -5,14 +5,16 @@ from octoprint.printer.estimation import PrintTimeEstimator
 from octoprint.filemanager.analysis import GcodeAnalysisQueue
 
 m73time = None
+m73progress = None
 
-class M73ETA(octoprint.plugin.OctoPrintPlugin,octoprint.plugin.RestartNeedingPlugin,octoprint.plugin.ReloadNeedingPlugin):
+class processM73(octoprint.plugin.OctoPrintPlugin,octoprint.plugin.RestartNeedingPlugin,octoprint.plugin.ReloadNeedingPlugin):
   def handle_m73(self, comm_instance, phase, cmd, cmd_type, gcode, *args, **kwargs):
     global m73time
     if gcode and gcode == "M73":
-      m = re.search('(?<=R)\w+', cmd)
+      m = re.search('P(\d+)\s+R(\d+)', cmd)
       if m:
-        m73time = m.group(0)
+        m73progress = m.group(1)
+        m73time = m.group(2)
 
   def get_update_information(self):
     return dict(
@@ -22,10 +24,10 @@ class M73ETA(octoprint.plugin.OctoPrintPlugin,octoprint.plugin.RestartNeedingPlu
 
             type="github_release",
             current=self._plugin_version,
-            user="gdombiak",
-            repo="OctoPrint-M73ETAOverride",
+            user="foorschtbar",
+            repo="OctoPrint-BetterM73Override",
 
-            pip="https://github.com/gdombiak/OctoPrint-M73ETAOverride/archive/{target}.zip"
+            pip="https://github.com/foorschtbar/OctoPrint-BetterM73Override/archive/{target}.zip"
         )
     )
 
@@ -58,12 +60,12 @@ class M73AnalysisQueue(GcodeAnalysisQueue):
 def m73_gcode_analysis_queue(*args, **kwargs):
   return dict(gcode=lambda finished_callback: M73AnalysisQueue(finished_callback))
 
-__plugin_name__ = "M73 ETA Override"
+__plugin_name__ = "Better M73 Override"
 __plugin_pythoncompat__ = ">=2.7,<4"
 
 def __plugin_load__():
   global __plugin_implementation__
-  __plugin_implementation__ = M73ETA()
+  __plugin_implementation__ = processM73()
 
   global __plugin_hooks__
   __plugin_hooks__ = {

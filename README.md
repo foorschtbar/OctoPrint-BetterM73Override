@@ -1,6 +1,9 @@
 # Better M73 Override
 
-Plugin that overrides OctoPrint ETA and percentage to values from last M73 gcode sent to the printer.
+> **Warning**
+> Waiting for OctoPrint API support for progress updates: https://github.com/OctoPrint/OctoPrint/issues/4663
+
+Plugin that overrides OctoPrint ETA and progress to values from last M73 gcode sent to the printer.
 
 PrusaSlicer is able to calculate print estimates very accurately. Those estimates get injected into generated gcode as [M73 gcode](https://marlinfw.org/docs/gcode/M073.html) commands. This plugin reads the injected information to override what OctoPrint uses as default to calculate estimates. Improved estimates are displayed in OctoPrint, your printer display and in your favorite OctoPrint client.
 
